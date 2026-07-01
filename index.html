@@ -5,107 +5,219 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LOGGERHEAD ($HEAD)</title>
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#071c2f;
+color:white;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+position:fixed;
+width:100%;
+background:rgba(7,28,47,.9);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:20px;
+text-decoration:none;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero img{
+width:170px;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:24px;
+opacity:.9;
+margin-bottom:35px;
+}
+
+.button{
+display:inline-block;
+padding:18px 45px;
+background:#00cfff;
+color:#000;
+font-weight:bold;
+border-radius:40px;
+text-decoration:none;
+font-size:20px;
+transition:.3s;
+}
+
+.button:hover{
+transform:scale(1.08);
+}
+
+.section{
+max-width:1100px;
+margin:auto;
+padding:90px 20px;
+}
+
+.card{
+background:#12324c;
+padding:35px;
+border-radius:20px;
+margin-bottom:30px;
+}
+
+.card h2{
+margin-bottom:20px;
+font-size:38px;
+}
+
+.tokenomics{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.box{
+background:#0d273d;
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+footer{
+padding:40px;
+text-align:center;
+opacity:.7;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-<h1>🐢 LOGGERHEAD ($HEAD)</h1>
+<div class="logo">🐢 LOGGERHEAD</div>
 
-<p class="slogan">
-THE OCEAN HAS A NEW LEGEND
-</p>
-
-<p class="desc">
-Slow to Move. Impossible to Stop.
-</p>
-
-<div class="buttons">
-
-<a href="#" class="buy">
-🚀 BUY ON PUMP.FUN
-</a>
-
-<a href="#" class="social">
-𝕏 Twitter
-</a>
-
-<a href="#" class="social">
-Telegram
-</a>
-
-</div>
+<nav>
+<a href="#about">About</a>
+<a href="#tokenomics">Tokenomics</a>
+<a href="#roadmap">Roadmap</a>
+<a href="#socials">Socials</a>
+</nav>
 
 </header>
 
-<section>
+<section class="hero">
+
+<img src="logo.png">
+
+<h1>LOGGERHEAD ($HEAD)</h1>
+
+<p>Slow To Move. Impossible To Stop.</p>
+
+<a class="button" href="#">BUY $HEAD</a>
+
+</section>
+
+<section id="about" class="section">
+
+<div class="card">
 
 <h2>About</h2>
 
 <p>
-LOGGERHEAD is a community-driven meme coin inspired by the legendary sea turtle.
-Built on Solana.
-Powered by the community.
+LOGGERHEAD is a community driven meme coin on Solana.
+Inspired by the unstoppable sea turtle.
+Built for fun, memes and a strong community.
 </p>
 
+</div>
+
 </section>
 
-<section>
+<section id="tokenomics" class="section">
 
-<h2>Tokenomics</h2>
+<h2 style="text-align:center;margin-bottom:30px;">Tokenomics</h2>
 
-<div class="card">
+<div class="tokenomics">
 
-<h3>Name</h3>
-
-<p>LOGGERHEAD</p>
-
+<div class="box">
+<h3>Supply</h3>
+<p>1,000,000,000</p>
 </div>
 
-<div class="card">
-
-<h3>Symbol</h3>
-
-<p>$HEAD</p>
-
-</div>
-
-<div class="card">
-
-<h3>Chain</h3>
-
-<p>Solana</p>
-
-</div>
-
-<div class="card">
-
+<div class="box">
 <h3>Tax</h3>
-
 <p>0%</p>
+</div>
+
+<div class="box">
+<h3>Chain</h3>
+<p>Solana</p>
+</div>
+
+<div class="box">
+<h3>Liquidity</h3>
+<p>Locked</p>
+</div>
 
 </div>
 
 </section>
 
-<section>
+<section id="roadmap" class="section">
+
+<div class="card">
 
 <h2>Roadmap</h2>
 
-<ul>
+<p>✅ Launch on Pump.fun</p>
+<p>✅ Community Growth</p>
+<p>✅ Raydium Listing</p>
+<p>✅ CoinGecko & CoinMarketCap</p>
 
-<li>✅ Launch on Pump.fun</li>
+</div>
 
-<li>✅ Grow Community</li>
+</section>
 
-<li>🚀 DexScreener</li>
+<section id="socials" class="section">
 
-<li>🚀 CoinGecko</li>
+<div class="card">
 
-<li>🚀 CEX Listing</li>
+<h2>Socials</h2>
 
-</ul>
+<p>X (Twitter): Coming Soon</p>
+<p>Telegram: Coming Soon</p>
+
+</div>
 
 </section>
 
@@ -114,8 +226,6 @@ Powered by the community.
 LOGGERHEAD © 2026
 
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
