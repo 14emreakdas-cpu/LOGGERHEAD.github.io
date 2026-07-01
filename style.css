@@ -1,0 +1,211 @@
+/* ===== LOGGERHEAD STYLE ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(180deg,#041522,#0b2f4a,#0a4463);
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Header */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(4,21,34,.85);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00d5ff;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#00d5ff;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px 60px;
+}
+
+.hero img{
+    width:240px;
+    margin-bottom:25px;
+    animation:float 4s ease-in-out infinite;
+}
+
+.hero h1{
+    font-size:64px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    font-size:22px;
+    color:#b8e8ff;
+    margin-bottom:35px;
+}
+
+.button{
+    display:inline-block;
+    padding:16px 36px;
+    background:#00d5ff;
+    color:#001d2d;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:40px;
+    transition:.3s;
+    box-shadow:0 0 20px #00d5ff;
+}
+
+.button:hover{
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 0 35px #00d5ff;
+}
+
+/* Sections */
+
+.section{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+}
+
+.section h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+}
+
+/* Glass Cards */
+
+.card{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+/* Tokenomics */
+
+.tokenomics{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.box{
+    background:rgba(255,255,255,.06);
+    padding:25px;
+    border-radius:16px;
+    text-align:center;
+    transition:.3s;
+}
+
+.box:hover{
+    transform:translateY(-8px);
+    background:rgba(0,213,255,.15);
+}
+
+.box h3{
+    margin-bottom:10px;
+}
+
+/* Roadmap */
+
+.card p{
+    margin:12px 0;
+    font-size:18px;
+}
+
+/* Footer */
+
+footer{
+    padding:40px;
+    text-align:center;
+    color:#9fd8ff;
+}
+
+/* Animation */
+
+@keyframes float{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:42px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
+.hero img{
+    width:180px;
+}
+
+.button{
+    width:90%;
+    max-width:320px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav a{
+    margin:8px;
+}
+
+}
